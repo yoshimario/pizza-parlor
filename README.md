@@ -1,4 +1,4 @@
-# _Pizza Parlor sWebsite_
+# _Pizza Parlor Website_
 
 #### _Independent Constructors & Prototypes Project for Epcicodus, 08.30.2020_
 
