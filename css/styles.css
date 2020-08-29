@@ -47,10 +47,7 @@ video {
   100%{background-position:0% 50%}
 }
 
-#pizzaOrderReciept {
-  display: none;
-}
-
+/* Section below places video in the Jumbotron Container*/
 
 .jumbotron {
   position: relative;
@@ -87,4 +84,9 @@ video {
   text-shadow: black 0.3em 0.3em 0.3em;
   background: rgb(255,28,128);
   background: linear-gradient(186deg, rgba(255,28,128,0.7678100263852243) 0%, rgba(196,135,48,1) 47%, rgba(77,208,192,0.6517150395778364) 100%);
+}
+
+/* Section below hides elements not needed*/
+#pizzaOrderReciept {
+  display: none;
 }

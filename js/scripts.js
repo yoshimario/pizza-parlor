@@ -1,10 +1,16 @@
-// Business Logic for Devil's Pizza
+// Business Logic for Devil's Pizza Order
 
 function PizzaOrder() {
-
+  this.devilPizzas= [];
 }
-)
 
+// Business Logic for Devil's Pizza
+
+function 
+
+PizzaOrder.prototype.addDevilsPizza = function(devilPizzas) {
+  devilPizzas.demonNumber
+}
 // User Experience Element
 
 $(document).ready(function() {
@@ -14,17 +20,3 @@ $(document).ready(function() {
 
   });
 });
-function deferVideo() {
-
-  //defer html5 video loading
-$("video source").each(function() {
-  var sourceFile = $(this).attr("data-src");
-  $(this).attr("src", sourceFile);
-  var video = this.parentElement;
-  video.load();
-  // uncomment if video is not autoplay
-  //video.play();
-});
-
-}
-window.onload = deferVideo;
