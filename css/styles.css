@@ -18,6 +18,32 @@ video {
   text-align: center;
   color: whitesmoke;
 }
-#pizzaForm{
-  color: blue;
+.card {
+  color: whitesmoke;
+  background: linear-gradient(270deg, #b51fd1, #04570d, #3237a0, #ef6116);
+  background-size: 800% 800%;
+  -webkit-animation: AnimationName 40s ease infinite;
+  -moz-animation: AnimationName 40s ease infinite;
+  -o-animation: AnimationName 40s ease infinite;
+  sanimation: AnimationName 40s ease infinite;
+}
+@-webkit-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@-o-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
 }
