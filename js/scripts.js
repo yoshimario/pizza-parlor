@@ -7,9 +7,10 @@ function DevilsPizzas() {
 }
 
 DevilsPizzas.prototype.devilsPrice = function(devilsPizza) {
-  let demonsTotal = [];
   let devilsPrice = [100, 80, 20];
   let devilsSize = ["biteSized", "demonsGlutton", "devilsFortress"];
+  let demonsTotal = 0;
+
   if (devilsSize === "biteSized") {
     demonsTotal === devilsPrice[1];
   } else if (devilsSize === "demonsGlutton") {
@@ -17,18 +18,11 @@ DevilsPizzas.prototype.devilsPrice = function(devilsPizza) {
   } else if (devilsSize === "devilsFortress") {
     demonsTotal === devilsPrice[3];
   } else {
-    demonsTotal = demonsTotal;
-  } 
+    demonsTotal = 0;
+  }; 
+  console.log("devilsPrice")
 }
 
 // User Experience Element
 let devilsPizza = new DevilsPizza();
 
-$(document).ready(function() {
-  $("form#pizzaForm").submit(function(event) {
-    event.preventDefault(); 
-    $("form#demonOrderTotal").show();
-    $("input:checkbox[name=devilsTopping]:checked").each(function() {
-      
-  });
-});
