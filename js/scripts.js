@@ -1,28 +1,34 @@
 // Business Logic for Devil's Pizza Order
 
-function DevilsPizzas() {
-  this.demonNumber = 0;  // Order Number
-  this.devilsPizzas = [];
+function DemonsOrder(devilsSize, devilsToppings) {
+  this.devilsSize = devilsSize;
   this.devilsToppings = devilsToppings;
+  this.devilsPrice = devilsPrice;
 }
 
-DevilsPizzas.prototype.devilsPrice = function(devilsPizza) {
-  let devilsPrice = [100, 80, 20];
-  let devilsSize = ["biteSized", "demonsGlutton", "devilsFortress"];
-  let demonsTotal = 0;
+DemonsOrder.prototype.devilsPrice = function() {
+  let devilsPrice = [240,120,30];
+  let devilsSize = ["biteSized","demonsGlutton","devilsFortress"];
 
   if (devilsSize === "biteSized") {
-    demonsTotal === devilsPrice[1];
+    this.devilsPrice === devilsPrice[1];
   } else if (devilsSize === "demonsGlutton") {
-    demonsTotal === devilsPrice[2];
+    this.devilsPrice === devilsPrice[2];
   } else if (devilsSize === "devilsFortress") {
-    demonsTotal === devilsPrice[3];
+    this.devilsPrice === devilsPrice[3];
   } else {
-    demonsTotal = 0;
-  }; 
-  console.log("devilsPrice")
-}
+    alert("Yo demon order your selection!");
+  }
+  console.log("devilsPrice");
+};
 
 // User Experience Element
-let devilsPizza = new DevilsPizza();
+let demonOrder = new DemonsOrder();
 
+$(document).ready(function() {
+  $("form#pizzaForm").submit(function(event) {
+    event.preventDefault();
+    $(".demonOrder").show();
+
+  });
+});
