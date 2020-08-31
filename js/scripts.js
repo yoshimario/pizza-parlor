@@ -29,23 +29,10 @@ function DevilsToppings (devils) {
 }
 
 // User Experience Element
-let devilsPizza = new DevilsPizza();
+let devilsizza = new DevilsPizza();
 let devilsToppings = new DevilsToppings();
 
 $(document).ready(function() {
   $("form#pizzaForm").submit(function(event) {
     event.preventDefault();
     $(".demonOrderTotal").show();
-    let devilsToppings = new DevilsToppings(inputtedVeggies, inputtedMeat, inputtedSauces, inputtedCheese);
-    let demonsOrder = new DemonsOrder(inputtedSize, inputtedType, pizzaToppings);
-    if (inputtedSize === "error") {
-      alert("Please choose a size");
-    } else if (inputtedType === "error") {
-      alert("Please choose a type of crust");
-    } else {
-      $("input#cheese").each(function() {
-        if ($(this).is(':checked')) {
-          let checked = ($(this).val());
-          inputtedCheese.push(checked);
-        }
-      });
