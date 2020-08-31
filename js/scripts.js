@@ -17,7 +17,27 @@ function DevilsPizza(devilsSize, devilsToppings) {
     alert("Yo demon order your selection!");
     this.devilsPrice = this.devilsPrice;
   }
+
+  if (this.devilsToppings.length > 0) {
+    this.devilsPrice += this.devilsToppings.length * 5;
+  }
+
   return this.devilsPrice;
+}
+
+
+DevilsPizza.prototype.showOrderSummary = function () {
+  /**
+   * 1. Selected toppins
+   * 2. Pizza Size
+   * 3. COst
+   */
+
+   return {
+      toppings: this.devilsToppings.split(', '),
+      size: this.devilsSize,
+      cost: this.devilsPrice
+   }
 }
 
 
@@ -32,12 +52,15 @@ let devilsToppings = new DevilsToppings();
 
 $(document).ready(function() {
   $("form#pizzaForm").submit(function(event) {
-    $(".demonOrderTotal").show();
     event.preventDefault();
+    $("#demonOrderTotal").show();
+    
     const inputDevilsSize = $("#devilsSize").val();
     const inputDevils = [];
     let devilsToppings = new DevilsToppings(inputDevils);
-    let devilsPizza = new DevilsPizza(inputDevilsSize, devilsToppings);
+    let devilsPizza = new DevilsPizza(inputDevilsSize, devilsToppings.devils);
+
+    console.log({ inputDevilsSize })
 
     if (inputDevilsSize === "badDemon") {
       alert("Please choose a size");
@@ -49,7 +72,9 @@ $(document).ready(function() {
         }
       });
       let demonOrderTotal = Object.values(devilsPizza);
-      $("#devilsPrice").text("$" + demonOrderTotal);
+      $("#demonOrderTotalValue").text("$" + devilsPizza.devilsPizzaPrice());
+      console.log(devilsPizza.devilsPizzaPrice())
     }
+    console.log(demonOrderTotal);
   });
 });
