@@ -87,6 +87,6 @@ video {
 }
 
 /* Section below hides elements not needed*/
-#demonOrder {
+#demonOrderTotal {
   display: none;
 }
