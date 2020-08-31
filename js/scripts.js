@@ -29,10 +29,26 @@ function DevilsToppings (devils) {
 }
 
 // User Experience Element
-let devilsizza = new DevilsPizza();
+let devilsPizza = new DevilsPizza();
 let devilsToppings = new DevilsToppings();
 
 $(document).ready(function() {
   $("form#pizzaForm").submit(function(event) {
-    event.preventDefault();
     $(".demonOrderTotal").show();
+    event.preventDefault();
+    const inputDevilsSize = $("#devilsSize").val();
+    const inputDevils = [];
+    let devilsToppings = new PizzaToppings(inputDevils);
+    let devilsPizza = new DevilsPizza(inputDevilsSize, devilsToppings);
+
+    if (inputDevilsSize === "unkno") {
+      alert("Please choose a size");
+    } else {
+      $("input#devils").each(function() {
+        if ($(this).is(':checked')) {
+          let checked = ($(this).val());
+          inputDevils.push(checked);
+        }
+      });
+  });
+});
