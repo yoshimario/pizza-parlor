@@ -7,7 +7,6 @@ function DevilsPizza(devilsSize, devilsToppings) {
 }
 
   DevilsPizza.prototype.devilsPizzaPrice = function() {
-
   if (this.devilsSize === "biteSized") {
     this.devilsPrice += 280;
   } else if (this.devilsSize === "demonsGlutton") {
@@ -18,11 +17,10 @@ function DevilsPizza(devilsSize, devilsToppings) {
     alert("Yo demon order your selection!");
     this.devilsPrice = this.devilsPrice;
   }
-  console.log("devilsPrice");
-  this.devilsPrice = this.devilsToppings.devils.length * 25.40 + this.devilsPrice;
-  }
   return this.devilsPrice;
 }
+
+
 
 function DevilsToppings (devils) {
   this.devils = devils;
@@ -38,10 +36,10 @@ $(document).ready(function() {
     event.preventDefault();
     const inputDevilsSize = $("#devilsSize").val();
     const inputDevils = [];
-    let devilsToppings = new PizzaToppings(inputDevils);
+    let devilsToppings = new DevilsToppings(inputDevils);
     let devilsPizza = new DevilsPizza(inputDevilsSize, devilsToppings);
 
-    if (inputDevilsSize === "unkno") {
+    if (inputDevilsSize === "badDemon") {
       alert("Please choose a size");
     } else {
       $("input#devils").each(function() {
@@ -50,5 +48,8 @@ $(document).ready(function() {
           inputDevils.push(checked);
         }
       });
+      let demonOrderTotal = Object.values(devilsPizza);
+      $("#devilsPrice").text("$" + demonOrderTotal);
+    }
   });
 });
