@@ -6,7 +6,7 @@ function DevilsPizza(devilsSize, devilsToppings) {
   this.devilsPrice = 0;
 }
 
-  DevilsPizza.prototype.devilsPizzaPrice = function() {
+DevilsPizza.prototype.devilsPizzaPrice = function() {
   if (this.devilsSize === "biteSized") {
     this.devilsPrice += 280;
   } else if (this.devilsSize === "demonsGlutton") {
@@ -18,7 +18,7 @@ function DevilsPizza(devilsSize, devilsToppings) {
     this.devilsPrice = this.devilsPrice;
   }
   if (this.devilsToppings.length > 0) {
-    this.devilsPrice += this.devilsToppings.length * 5;
+    this.devilsPrice += this.devilsToppings.length * 240.5;
   }
   return this.devilsPrice;
 }
