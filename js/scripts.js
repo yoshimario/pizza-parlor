@@ -17,11 +17,9 @@ function DevilsPizza(devilsSize, devilsToppings) {
     alert("Yo demon order your selection!");
     this.devilsPrice = this.devilsPrice;
   }
-
   if (this.devilsToppings.length > 0) {
     this.devilsPrice += this.devilsToppings.length * 5;
   }
-
   return this.devilsPrice;
 }
 
@@ -30,7 +28,7 @@ DevilsPizza.prototype.showOrderSummary = function () {
   /**
    * 1. Selected toppins
    * 2. Pizza Size
-   * 3. COst
+   * 3. Cost
    */
 
    return {
@@ -39,8 +37,6 @@ DevilsPizza.prototype.showOrderSummary = function () {
       cost: this.devilsPrice
    }
 }
-
-
 
 function DevilsToppings (devils) {
   this.devils = devils;
@@ -54,16 +50,12 @@ $(document).ready(function() {
   $("form#pizzaForm").submit(function(event) {
     event.preventDefault();
     $("#demonOrderTotal").show();
-    
     const inputDevilsSize = $("#devilsSize").val();
     const inputDevils = [];
     let devilsToppings = new DevilsToppings(inputDevils);
     let devilsPizza = new DevilsPizza(inputDevilsSize, devilsToppings.devils);
-
-    console.log({ inputDevilsSize })
-
     if (inputDevilsSize === "badDemon") {
-      alert("Please choose a size");
+      alert("Yo demon you are in hell so please the Devil and select your pizza!");
     } else {
       $("input#devils").each(function() {
         if ($(this).is(':checked')) {
@@ -71,10 +63,7 @@ $(document).ready(function() {
           inputDevils.push(checked);
         }
       });
-      let demonOrderTotal = Object.values(devilsPizza);
       $("#demonOrderTotalValue").text("$" + devilsPizza.devilsPizzaPrice());
-      console.log(devilsPizza.devilsPizzaPrice())
     }
-    console.log(demonOrderTotal);
   });
 });
