@@ -18,7 +18,7 @@ _Sample_
 * _Open index.html_
 * _View website in browser_
 
-Or alternatively view it at 
+Or alternatively view it at https://yoshimario.github.io/pizza-parlor/.
 
 ### Specifications
 
