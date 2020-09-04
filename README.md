@@ -4,12 +4,10 @@
 
 #### By _**Sean Wilson**_
 
-![Helsinki Oodi Library Finland](https://seanpwilson.com/wp-content/uploads/sites/1/nggallery/finland-2019/IMG_2409.jpg)
-_A photo created by Sean Wilson_
 
 ## Description
 
-_Sample_
+_This project is my use of prototypes and constructors. User can order a pizza and toppings and get a result._
 
 ## Setup/Installation Requirements
 
@@ -27,11 +25,11 @@ Or alternatively view it at https://yoshimario.github.io/pizza-parlor/.
   * Output: "Yo demon you are in hell so please the Devil and select your pizza!"
 
 * Spec 2: User selects a pizza size and no toppings
-  * Input: "Bite Sized Pizza"
+  * Input: pizza = {size = "bite sized"}
   * Output: "The demons total will cost: $280"
 
 * Spec 3: User selects a pizza size and two toppings
-  * Input: "Bite Sized Pizza" + Fire + Sweat
+  * Input: pizza = {size = "bite sized", toppings = ['fire'], ['sweat']}
   * Output: "The demons total will cost: $761"
 ## Known Bugs
 
