@@ -43,8 +43,6 @@ function DevilsToppings (devils) {
 }
 
 // User Experience Element
-let devilsPizza = new DevilsPizza();
-let devilsToppings = new DevilsToppings();
 
 $(document).ready(function() {
   $("form#pizzaForm").submit(function(event) {
